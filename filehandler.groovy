@@ -1,3 +1,4 @@
+@NonCPS
 def getFileLayouts(String fileName) {
     File file = new File(fileName)
     String fileContent = file.text
