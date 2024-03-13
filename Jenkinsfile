@@ -6,7 +6,7 @@ pipeline {
         stage('Hello') {
             steps {
                 script {
-                    def fileHandler = load "${rootDir}/filehandler.Groovy" 
+                    def fileHandler = load "filehandler.Groovy" 
 
                     def adminProfile = "Admin.profile-meta.xml"
                     def itSupportAdminProfile = "IT Support Admin.profile-meta.xml"
