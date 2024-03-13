@@ -2,8 +2,8 @@
 def getFileLayouts(String fileName) {
     File file = new File(fileName)
     String fileContent = file.text
-    layouts = []
-    temp = (fileContent =~ /<layout>(.+)<\/layout>/)
+    def layouts = []
+    def temp = (fileContent =~ /<layout>(.+)<\/layout>/)
     temp.eachWithIndex { item, index ->
         layouts.add(item[1])
     }
