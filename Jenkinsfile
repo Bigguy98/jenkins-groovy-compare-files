@@ -1,5 +1,5 @@
 pipeline {
-    // agent any
+    agent any
 
     stages {
         stage('[tttest-123] Verify Admin Profile') {
