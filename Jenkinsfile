@@ -6,8 +6,6 @@ pipeline {
         stage('Hello') {
             steps {
                 script {
-                    def fileHandler = load "filehandler.groovy" 
-
                     def adminProfile = "${env.WORKSPACE}/Admin.profile-meta.xml"
                     def itSupportAdminProfile = "${env.WORKSPACE}/IT Support Admin.profile-meta.xml"
                     
@@ -18,11 +16,11 @@ pipeline {
                     if (fileExists(adminProfile)) {
                         if (fileExists(itSupportAdminProfile)) {
 
-                        def adminLayouts = fileHandler.getFileLayouts(adminProfile)
-                        def supportLayouts = fileHandler.getFileLayouts(itSupportAdminProfile)
+                        def adminLayouts = getFileLayouts(adminProfile)
+                        def supportLayouts = getFileLayouts(itSupportAdminProfile)
                         // Compare layout assignments using regex
 
-                        def missingLayoutAssignments = fileHandler.getMissingLayoutAssignments(adminLayouts, supportLayouts)
+                        def missingLayoutAssignments = getMissingLayoutAssignments(adminLayouts, supportLayouts)
                             if (!missingLayoutAssignments.isEmpty()) {
                             error "IT Support profile is missing the following layout assignments:\n${missingLayoutAssignments.join('\n')}"
                             }
@@ -39,4 +37,21 @@ pipeline {
         }
     }
 
+}
+
+
+@NonCPS
+def getFileLayouts(String fileName) {
+    File file = new File(fileName)
+    String fileContent = file.text
+    def layouts = []
+    def temp = (fileContent =~ /<layout>(.+)<\/layout>/)
+    temp.eachWithIndex { item, index ->
+        layouts.add(item[1])
+    }
+    return layouts;
+}
+
+def getMissingLayoutAssignments(List<String> layouts1, List<String> layouts2 ) {
+    return (layouts1 - layouts2)
 }
