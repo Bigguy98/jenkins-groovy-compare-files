@@ -12,6 +12,7 @@ pipeline {
                     echo "Admin Profle Path: ${adminProfile}"
                     echo "IT Support Admin Profle Path: ${itSupportAdminProfile}"
                     echo "Current Directory: ${pwd()}"
+                    echo "Hello world from bugsmaker"
 
                     if (fileExists(adminProfile)) {
                         if (fileExists(itSupportAdminProfile)) {
@@ -30,7 +31,7 @@ pipeline {
                     } else {
                             echo "Admin profile file is not present, skipping verification"
                     }
-
+    
                 }
                
             }
