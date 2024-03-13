@@ -2,9 +2,8 @@ pipeline {
     // agent any
 
     stages {
-
         stage('[tttest-123] Verify Admin Profile') {
-            node(SF_NODE_LABEL) {
+            steps {
             
                 def fileHandler = load "${rootDir}/filehandler.Groovy" 
 
