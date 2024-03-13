@@ -1,11 +1,6 @@
-pipeline {
-    agent any
-
-
-    stages {
-        stage('Hello') {
-            steps {
-                script {
+node {
+    stage('Example') {
+        script {
                     def adminProfile = "${env.WORKSPACE}/Admin.profile-meta.xml"
                     def itSupportAdminProfile = "${env.WORKSPACE}/IT Support Admin.profile-meta.xml"
                     
@@ -32,13 +27,8 @@ pipeline {
                     }
 
                 }
-               
-            }
-        }
     }
-
 }
-
 
 @NonCPS
 def getFileLayouts(String fileName) {
