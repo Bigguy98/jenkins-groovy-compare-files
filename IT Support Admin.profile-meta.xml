@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/tttteeeeessssttttt">
+  <fullName>IT Support Admin</fullName>
+  <applicationVisibilities>
+    <application>Auction_Results_Hub</application>
+    <default>false</default>
+    <visible>true</visible>
+  </applicationVisibilities>
+  <applicationVisibilities>
+    <application>BLND_SnapShot</application>
+    <default>false</default>
+    <visible>true</visible>
+  </applicationVisibilities>
+  <applicationVisibilities>
+    <application>CustomerHub_Lightning</application>
+    <default>false</default>
+    <visible>true</visible>
+  </applicationVisibilities>
+  <fieldPermissions>
+    <editable>true</editable>
+    <field>Person__c.Quarter__c</field>
+    <readable>true</readable>
+  </fieldPermissions>
+  <fieldPermissions>
+    <editable>true</editable>
+    <field>UPerson.Quota_Featured__c</field>
+    <readable>true</readable>
+  </fieldPermissions>
+  <fieldPermissions>
+    <editable>true</editable>
+    <field>User_GTV_Aggregate__c.Quota_Live__c</field>
+    <readable>true</readable>
+  </fieldPermissions>
+  <flowAccesses>
+    <enabled>false</enabled>
+    <flow>Submit_PSCs_for_Approval_Automatically</flow>
+  </flowAccesses>
+  <flowAccesses>
+    <enabled>false</enabled>
+    <flow>UpdateEndDateOnEvent</flow>
+  </flowAccesses>
+  <flowAccesses>
+    <enabled>false</enabled>
+    <flow>UpdateSubTypeOnTask</flow>
+  </flowAccesses>
+  <layoutAssignments>
+    <layout>Audit_Log__c-Audit Log Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFAC_Shared_View__c-DreamFactory Shared View Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFCS_Carousel__c-Carousel Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFCS_Slide__c-Slide Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFDT_Action_Item__c-DreamTeam Action Item Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFDT_Discussion__c-DreamTeam Discussion Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFDT_Highlight__c-DreamTeam Highlight Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFDT_Issue__c-DreamTeam Issue Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFDT_Linker__c-DreamTeam Linker Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFDT_Project__c-DreamTeam Project Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFDT_Resource__c-DreamTeam Resource Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFDT_Task__c-DreamTeam Task Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFFF_Form__c-Form Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFFF_Page__c-Page Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFTE_Expense__c-DreamTeam Expense Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFTE_Time__c-DreamTeam Time Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFTT_Document__c-TableTop Document Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFTT_Entity_Info__c-TableTop Entity Info Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BLND_DFTT_Folder__c-TableTop Folder Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>Bank_Account__c-Banking Information Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>Billing_Country__mdt-Billing Country Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>BusinessBrand-Business Brand Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>Business_Unit__c-Business Unit Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>Business_Unit__c-Business Unit Layout</layout>
+    <recordType>Business_Unit__c.Business_Unit</recordType>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>Campaign-Campaign Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>CampaignInfluence-Campaign Influence Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>CampaignMemberezzzzz-Campaign Memberzzzzzz Page Layout</layout>
+  </layoutAssignments>
+  <layoutAssignments>
+    <layout>Case-Case %28Support%29 Layout</layout>
+  </layoutAssignments>
+  <tabVisibilities>
+    <tab>standard-Chatter</tab>
+    <visibility>DefaultOn</visibility>
+  </tabVisibilities>
+  <tabVisibilities>
+    <tab>standard-CmsAuthorHome</tab>
+    <visibility>DefaultOff</visibility>
+  </tabVisibilities>
+  <tabVisibilities>
+    <tab>standard-CollaborationGroup</tab>
+    <visibility>DefaultOn</visibility>
+  </tabVisibilities>
+  <tabVisibilities>
+    <tab>standard-Contact</tab>
+    <visibility>DefaultOn</visibility>
+  </tabVisibilities>
+  <tabVisibilities>
+    <tab>ntactPointTypeConsent</tab>
+    <visibility>DefaultOn</visibility>
+  </tabVisibilities>
+  <tabVisibilities>
+    <tab>tentNote</tab>
+    <visibility>DefaultOn</visibility>
+  </tabVisibilities>
+  <tabVisibilities>
+    <tab>standard-Contract</tab>
+    <visibility>DefaultOn</visibility>
+  </tabVisibilities>
+  <tabVisibilities>
+    <tab>standard-Dashboard</tab>
+    <visibility>DefaultOn</visibility>
+  </tabVisibilities>
+  <userLicense>Salesforce</userLicense>
+</Profile>
