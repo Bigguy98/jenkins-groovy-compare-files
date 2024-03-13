@@ -8,8 +8,8 @@ pipeline {
                 script {
                     def fileHandler = load "filehandler.groovy" 
 
-                    def adminProfile = "Admin.profile-meta.xml"
-                    def itSupportAdminProfile = "IT Support Admin.profile-meta.xml"
+                    def adminProfile = "${env.WORKSPACE}/Admin.profile-meta.xml"
+                    def itSupportAdminProfile = "${env.WORKSPACE}/IT Support Admin.profile-meta.xml"
                     
                     echo "Admin Profle Path: ${adminProfile}"
                     echo "IT Support Admin Profle Path: ${itSupportAdminProfile}"
