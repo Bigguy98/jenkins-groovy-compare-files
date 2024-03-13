@@ -1,33 +1,33 @@
 node {
     stage('Example') {
         script {
-                    def adminProfile = "${env.WORKSPACE}/Admin.profile-meta.xml"
-                    def itSupportAdminProfile = "${env.WORKSPACE}/IT Support Admin.profile-meta.xml"
-                    
-                    echo "Admin Profle Path: ${adminProfile}"
-                    echo "IT Support Admin Profle Path: ${itSupportAdminProfile}"
-                    echo "Current Directory: ${pwd()}"
-                    echo "Hello world from bugsmaker updated NonCPS" 
+            def adminProfile = "${env.WORKSPACE}/Admin.profile-meta.xml"
+            def itSupportAdminProfile = "${env.WORKSPACE}/IT Support Admin.profile-meta.xml"
+            
+            echo "Admin Profle Path: ${adminProfile}"
+            echo "IT Support Admin Profle Path: ${itSupportAdminProfile}"
+            echo "Current Directory: ${pwd()}"
+            echo "Hello world from bugsmaker updated NonCPS" 
 
-                    if (fileExists(adminProfile)) {
-                        if (fileExists(itSupportAdminProfile)) {
+            if (fileExists(adminProfile)) {
+                if (fileExists(itSupportAdminProfile)) {
 
-                        def adminLayouts = getFileLayouts(adminProfile)
-                        def supportLayouts = getFileLayouts(itSupportAdminProfile)
-                        // Compare layout assignments using regex
+                def adminLayouts = getFileLayouts(adminProfile)
+                def supportLayouts = getFileLayouts(itSupportAdminProfile)
+                // Compare layout assignments using regex
 
-                        def missingLayoutAssignments = getMissingLayoutAssignments(adminLayouts, supportLayouts)
-                            if (!missingLayoutAssignments.isEmpty()) {
-                            error "IT Support profile is missing the following layout assignments:\n${missingLayoutAssignments.join('\n')}"
-                            }
-                        } else {
-                            error "IT Support Admin profile file is missing"
-                        }
-                    } else {
-                            echo "Admin profile file is not present, skipping verification"
+                def missingLayoutAssignments = getMissingLayoutAssignments(adminLayouts, supportLayouts)
+                    if (!missingLayoutAssignments.isEmpty()) {
+                    error "IT Support profile is missing the following layout assignments:\n${missingLayoutAssignments.join('\n')}"
                     }
-    
+                } else {
+                    error "IT Support Admin profile file is missing"
                 }
+            } else {
+                    echo "Admin profile file is not present, skipping verification"
+            }
+
+        }
     }
 }
 
