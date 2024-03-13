@@ -7,6 +7,7 @@ node {
                     echo "Admin Profle Path: ${adminProfile}"
                     echo "IT Support Admin Profle Path: ${itSupportAdminProfile}"
                     echo "Current Directory: ${pwd()}"
+                    echo "Hello world from bugsmaker updated NonCPS" 
 
                     if (fileExists(adminProfile)) {
                         if (fileExists(itSupportAdminProfile)) {
@@ -25,7 +26,7 @@ node {
                     } else {
                             echo "Admin profile file is not present, skipping verification"
                     }
-
+    
                 }
     }
 }
