@@ -12,7 +12,7 @@ pipeline {
                     echo "Admin Profle Path: ${adminProfile}"
                     echo "IT Support Admin Profle Path: ${itSupportAdminProfile}"
                     echo "Current Directory: ${pwd()}"
-                    echo "Hello world from bugsmaker"
+                    echo "Hello world from bugsmaker updated NonCPS" 
 
                     if (fileExists(adminProfile)) {
                         if (fileExists(itSupportAdminProfile)) {
